@@ -1,2 +1,2 @@
-# INFO1-HKA_EIT
+# INFO-HKA_EIT
 Aufgaben von INFO1 erstes Semester von Elektrotechnik der Hochschule Karlsruhe
