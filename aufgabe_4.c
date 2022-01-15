@@ -1,6 +1,14 @@
 #include <stdio.h>
 
 
+//#####################################################################################################################
+
+//Funktion der Aufgabe:
+//Aufgabe 2
+
+//#####################################################################################################################
+
+
 int print_bit(int dezimal_zahl, char *ergebnis, int zaehler) {
 
     int rest = 0;
@@ -11,28 +19,24 @@ int print_bit(int dezimal_zahl, char *ergebnis, int zaehler) {
     char variable;
     if (dezimal_zahl < 0) dezimal_zahl = -dezimal_zahl;
 
-    while (dezimal_zahl >= 0) {
+    while (dezimal_zahl != 0) {
         rest = dezimal_zahl % 2;
         dezimal_zahl = dezimal_zahl / 2;
 
         if (rest == 1) ergebnis[zaehler] = '1';
         else if (rest == 0) ergebnis[zaehler] = '0';
 
-
-        if (dezimal_zahl == 0) break;
         zaehler++;
-        counter_leerstellen = 0;
 
         if ((zaehler - counter_leerstellen) % 4 == 0) {
             ergebnis[zaehler] = ' ';
             zaehler++;
-            counter_leerstellen += 1;
+            counter_leerstellen += 5;
         }
 
     }
 
-    //VZ
-    zaehler++;
+    //Vorzeichen
     if (vorzeichen < 0){
         ergebnis[zaehler] = '1';
     }
@@ -40,8 +44,9 @@ int print_bit(int dezimal_zahl, char *ergebnis, int zaehler) {
         ergebnis[zaehler] = '0';
     }
 
+    //Rumdrehen des Strings -> weil Binär links von rechts
     zaehler_2 = zaehler;
-    zaehler_3 = zaehler +2;
+    zaehler_3 = zaehler + 2;
     for (int x = 0; x <= zaehler/2; x++) {
         variable = ergebnis[zaehler_2];
         ergebnis[zaehler_2] = ergebnis[x];
@@ -51,6 +56,14 @@ int print_bit(int dezimal_zahl, char *ergebnis, int zaehler) {
     return zaehler_3;
 
 }
+
+
+//#####################################################################################################################
+
+//Funktion der Aufgabe:
+//Aufgabe 3
+
+//#####################################################################################################################
 
 
 void dezimal_zahl(char binaere_zahl[18], int ergebnis_dezimal){
@@ -84,10 +97,16 @@ void dezimal_zahl(char binaere_zahl[18], int ergebnis_dezimal){
 
     printf("%i", ergebnis_dezimal);
 
-
 }
 
+//#####################################################################################################################
+
+//Funktion der Aufgabe:
 //Aufgabe 5
+//Der Name muss unten verändert werden, um die verschiedenen Funktionen aufzurufen
+
+//#####################################################################################################################
+
 int is_event_modulo(int eingabe_zahl_2){
     if (eingabe_zahl_2 % 2 == 0) return 1;
     else return 0;
@@ -159,19 +178,6 @@ int main() {
     char ergebnis[200] = { 0 };
 
     print_bit(eingabe_zahl, ergebnis, zaehler);
-
-/**
- * // Ist das selbe wie in der Funktion -> macht eine Lücke nach dem 4 Bit
-    printf("Die Binär zahl lautet: ");
-    for (int x = 0; ergebnis[x] != '\0'; x++) {
-        printf("%c", ergebnis[x]);
-        counter_four += 1;
-        if (counter_four == 4){
-            printf(" ");
-            counter_four = 0;
-        };
-    };
-**/
     printf("Das Ergebnis lautet: %s", ergebnis);
 
 
