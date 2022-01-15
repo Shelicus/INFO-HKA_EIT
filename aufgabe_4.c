@@ -149,6 +149,8 @@ int teilbarkeit(int eingabe_zahl_3){
 }
 
 
+// Start vom Programm 
+
 
 int main() {
 
