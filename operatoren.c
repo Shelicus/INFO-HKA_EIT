@@ -24,12 +24,12 @@
 
 int main() {
 
-    //Integer Werte: -> ganzzahlig von
+    //Integer Werte: -> ganzzahlig von 	-32 768 .. 32 767
     int a = 5;
     int b = 8;
     int ergebnis;
 
-    //Floate Werte: -> Komma zahlen von
+    //Floate Werte: -> Komma zahlen von 1.2E-38 to 3.4E+38
     float ergebnis2;
     float c = 3.45;
     float d = 8;
