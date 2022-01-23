@@ -12,6 +12,8 @@ int main() {
     //                                     float/long = 4 bytes    32 Bits
     //                                     long long = 8 bytes     64 Bits
 
+    // int variable["anzahl" * sizeof(int)] = [1,2,3,4];
+
     //Anzahl immer Datentype mal länge und beim String (Zeichenkette) +1 Byte, wegen der Enderkennung
     //String ist eine Zeichenkette und Array eine Liste mit Zeichen
     //Außerdem:
